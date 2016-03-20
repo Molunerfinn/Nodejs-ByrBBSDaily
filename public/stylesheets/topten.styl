@@ -1,0 +1,171 @@
+@import 'nib'
+// 变量
+com-height = 50px
+font-grey = #ddd
+color-lblue = #6FADFF
+color-hblue = #5e9aea
+color-grey = #AFAFAF
+font-size = 10px
+box-shadow(bsp,bscolor)
+  box-shadow 0 bsp bsp bscolor 
+heart(deg,per-1,per-2)
+  transform rotate(deg); 
+  transform-origin per-1 per-2; 
+body
+  font-size font-size
+body
+ul
+  margin 0
+  padding 0
+  font: 14px "Microsoft Yahei", Helvetica, Arial, sans-serif
+header
+  width 100%
+  height com-height
+  border-bottom 1px solid #F3F3F3
+  position fixed
+  z-index 1
+  top 0
+  background #fff
+  box-shadow(1px,#F1F1F1)
+  opacity .9
+#logo
+  display inline-block
+  font-size 1.4rem
+  line-height 50px
+  a.logo
+    text-decoration none
+    color #000
+    &:hover
+      color #5e9aea
+    transition color 0.2s
+nav
+  display inline-block
+  line-height 50px
+  .menu
+    margin-left 50px
+    a.menu-button
+      text-decoration none
+      color #000
+      &:hover
+        color #5e9aea
+      transition color 0.2s
+ul
+  list-style none
+#header-container
+.main
+  padding 0 15px
+  max-width 950px
+  margin auto
+.main
+  margin com-height auto 0
+.night
+  display none
+div.date
+  font-size 1.2rem
+  margin 0
+  background #F5F5F5
+  padding 0 0 0 2px
+  line-height 30px
+.title
+  font-size 0.9rem
+  font-weight bold
+  display inline-block
+.author
+.author-name
+.board-name
+.read-more
+  text-decoration none
+  margin 0 5px 0 0
+  font-size 0.7rem
+.info
+  margin-top 5px
+  white-space:normal
+  .author
+  .board
+  .read-more
+    background color-lblue
+    margin 0 5px 0 0
+    padding 2px 6px
+    color #fff
+    font-size 0.7rem
+  .author-name
+  .board-name
+    color color-grey
+    transition color .2s
+    margin 0 15px 0 0
+    max-width 20%
+    white-space nowrap
+    overflow hidden
+    text-overflow ellipsis
+    display inline-block
+    line-height 0.8em
+    &:hover
+      color color-lblue
+  .more-content
+    padding 10px
+    border 1px solid #ddd
+    margin-top 10px
+    display none
+    opacity 0
+    img
+      max-width 100%
+    .line
+      border none
+      border-top 1px solid #ddd
+    .close
+      overflow hidden
+      a.close-button
+      a.origin-article
+        float right
+        background color-lblue
+        margin 0 5px 0 5px
+        padding 2px 4px
+        color #fff
+        text-decoration none
+.content
+  margin 5px 0
+  border 1px solid #fff
+  padding 8px
+  transition border .2s
+  &:hover
+    border 1px solid #ddd
+footer
+  text-align center
+  background color-grey
+  padding 10px 0
+  margin 30px 0 0 0
+  display none
+  a
+    text-decoration none
+    color #000
+    transition color .3s
+    &:hover
+      color #fff
+.cd-top
+  position fixed
+  z-index 999
+  bottom 20%
+  width 40px
+  height 40px
+  display inline-block
+  visibility hidden
+  overflow hidden
+  transition opacity .3s 0s, visibility 0s .3s
+  white-space nowrap
+  text-indent 100%
+  opacity 0
+  background rgba(192,192,192,.9) url(../images/cd-top.svg) no-repeat center 50%;
+  box-shadow 0 0 10px rgba(0, 0, 0, .05)
+.cd-top.cd-is-visible
+.cd-top.cd-fade-out
+.cd-top:hover
+  transition opacity .3s 0s, visibility 0s 0s,background-color .5s
+.cd-top.cd-is-visible
+  visibility visible
+  opacity 1
+.cd-top.cd-fade-out
+  opacity .7
+.cd-top:hover
+  opacity 1
+  background-color #3782e7
+

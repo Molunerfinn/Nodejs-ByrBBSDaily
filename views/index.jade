@@ -1,0 +1,69 @@
+extends layout
+
+block content
+  header
+    div#header-container
+      #logo
+        a.logo(href="javascript:void(0)") 论坛日报
+      nav
+        nav.menu 
+          a.menu-button.day-top(href="javascript:void(0)") 晨间
+        nav.menu 
+          a.menu-button.night-top(href="javascript:void(0)") 晚间
+  ul.main.day
+    - for (var i = 0; i < 2 ; i++){
+      if (toptensDay[i] == undefined )
+        return
+      else
+        li.topten-lists
+          ul.topten-main
+            li.topten-date
+              div.date= toptensDay[i].toptenDay.date + " 晨间"
+            each info, j in toptensDay[i].toptenDay.info
+              li.content
+                // span.topno= info.topno + " "
+                div.title= info.title 
+                // #heart
+                div.info
+                  span.author 作者
+                  a.author-name(href="http://m.byr.cn/user/query/"  +info.author)= info.author
+                  span.board 版面
+                  a.board-name(href="http://bbs.byr.cn/board/"  +info.boardName)= info.boardName
+                  a.read-more(href="javascript:void(0)") 全文
+                  div.more-content!= info.content
+                    hr.line
+                    div.close
+                      a.close-button(href="javascript:void(0)") 收起
+                      a.origin-article(href= info.link target="_blank") 原文
+    - }
+  ul.main.night
+    - for (var i = 0; i < 2 ; i++){
+      if (toptens[i] == undefined )
+        return
+      else
+        li.topten-lists
+          ul.topten-main
+            li.topten-date
+              div.date= toptens[i].topten.date + " 晚间"
+            each info, j in toptens[i].topten.info
+              li.content
+                // span.topno= info.topno + " "
+                div.title= info.title 
+                // #heart
+                div.info
+                  span.author 作者
+                  a.author-name(href="http://m.byr.cn/user/query/"  +info.author)= info.author
+                  span.board 版面
+                  a.board-name(href="http://bbs.byr.cn/board/"  +info.boardName)= info.boardName
+                  a.read-more(href="javascript:void(0)") 全文
+                  div.more-content!= info.content
+                    hr.line
+                    div.close
+                      a.close-button(href="javascript:void(0)") 收起
+                      a.origin-article(href= info.link target="_blank") 原文
+    - }
+  a.cd-top(href="#0") Top
+  footer ©2016 TEAM-SZ@
+    a(href="https://github.com/Molunerfinn") Molunerfinn
+    
+
