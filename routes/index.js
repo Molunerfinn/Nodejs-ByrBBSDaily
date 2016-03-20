@@ -36,24 +36,20 @@ router.post('/topten', function(req, res) {
 
     if(flag == "day"){
       toptensDay.find({},{sort: [["_id",-1]]},function(e,docs){
-          console.log(docs.length)
           if (loadNum < docs.length){
             res.send('toptens', {
                 "toptensDay" : docs[loadNum],
             });
-            console.log(docs[loadNum])
           } else{
             res.send("error");
           }
       });           
     } else{
       toptens.find({},{sort: [["_id",-1]]},function(e,docs){
-          console.log(docs.length)
           if (loadNum < docs.length){
             res.send('toptens', {
                 "toptens" : docs[loadNum],
             });
-            console.log(docs[loadNum])
           } else{
             res.send("error");
           }
