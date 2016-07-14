@@ -233,3 +233,7 @@ footer a:hover {
   filter: none;
   background-color: #3782e7;
 }
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
